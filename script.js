@@ -158,6 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // type(); // Re-add your typing effect call here
 });
 
+// 7. Scroll Spy: Update Navbar Links on Scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // Offset of 150px helps trigger the change slightly before reaching the top
+        if (window.scrollY >= (sectionTop - 150)) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active');
+        }
+    });
+});
+
 // Back to Top Button
 document.getElementById('backToTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
