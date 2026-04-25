@@ -274,7 +274,8 @@ function initThree() {
     const p7 = createPlanet(1.0, '#ffffff', '#9d50bb', 5, -150, 'earth', true);
     const p8 = createPlanet(2.0, '#ff0066', '#330011', -6, -190, 'gas', true);
     const p9 = createPlanet(1.4, '#00ffaa', '#002211', 7, -230, 'earth', false);
-    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9];
+    const p10 = createPlanet(2.8, '#ff9900', '#331100', -8, -270, 'gas', true);
+    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
 
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
