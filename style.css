@@ -1,11 +1,14 @@
 :root {
-    --primary-blue: #00d2ff;
-    --primary-purple: #9d50bb;
-    --primary-magenta: #ff00cc;
+    --primary-sky: #0ea5e9;    /* Sky (Col 1) */
+    --primary-blue: #00d2ff;   /* Blue (Col 2) */
+    --primary-purple: #9d50bb; /* Violet (Col 3) */
+    --primary-magenta: #ff00cc;/* Pink (Col 4) */
+    --primary-teal: #14b8a6;   /* Teal (Arsenal 1) */
+    --primary-red: #ef4444;    /* Red (Arsenal 4) */
+    
     --dark-bg: #02040a;
     --glass-bg: rgba(255, 255, 255, 0.02);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --neon-glow: 0 0 15px rgba(0, 210, 255, 0.3);
 }
 
 /* --- Custom Galactic Scrollbar --- */
@@ -177,4 +180,18 @@ h1, h2, h3, .tech-font {
 @media (max-width: 768px) {
     #custom-cursor-container { display: none; }
     body { cursor: auto; }
+}
+
+/* Ensure Lucide Icons have a physical presence */
+i[data-lucide] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* Ensure SVGs inside <i> inherit the parent's Tailwind size classes */
+i[data-lucide] svg {
+    width: 100%;
+    height: 100%;
 }

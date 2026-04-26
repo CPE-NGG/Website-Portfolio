@@ -1,14 +1,19 @@
 // --- Initialization ---
+lucide.createIcons(); 
+
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     setTimeout(() => {
         loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 800);
+        setTimeout(() => {
+            loader.style.display = 'none';
+            // TRIGGER RE-SCAN HERE to catch any new project cards
+            lucide.createIcons(); 
+        }, 800);
         initThree();
         initTyping();
         initCustomCursor();
     }, 2000);
-    lucide.createIcons();
 });
 
 // --- Mobile Menu Logic ---
@@ -275,7 +280,9 @@ function initThree() {
     const p8 = createPlanet(2.0, '#ff0066', '#330011', -6, -190, 'gas', true);
     const p9 = createPlanet(1.4, '#00ffaa', '#002211', 7, -230, 'earth', false);
     const p10 = createPlanet(2.8, '#ff9900', '#331100', -8, -270, 'gas', true);
-    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10];
+    const p11 = createPlanet(1.6, '#14b8a6', '#002222', 6, -320, 'earth', false);
+    const p12 = createPlanet(3.5, '#ef4444', '#2a0000', -10, -380, 'gas', true);
+    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
 
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
