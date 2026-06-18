@@ -98,7 +98,7 @@ function initCustomCursor() {
 // --- Typing Animation ---
 function initTyping() {
     const text = document.getElementById('typing-text');
-    const phrases = ['Systems Architect', 'Digital Navigator', 'UI Visionary', 'Creative Engineer'];
+    const phrases = ['Frontend Developer', 'Cyber Security Analyst', 'Computer Engineer', 'Network Engineer'];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
