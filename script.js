@@ -269,20 +269,21 @@ function initThree() {
         return group;
     }
 
-    // --- Planets spaced out for the whole scroll depth ---
+// --- Planets spaced closer together to fit within scroll depth ---
     const p1 = createPlanet(1.2, '#00d2ff', '#ffffff', 6, 2, 'earth', false);
-    const p2 = createPlanet(2.5, '#9d50bb', '#3a0a5a', -10, -15, 'gas', true);
-    const p3 = createPlanet(1.5, '#ff00cc', '#440022', 8, -35, 'earth', false);
-    const p4 = createPlanet(3.0, '#00ffff', '#004444', -7, -60, 'gas', true);
-    const p5 = createPlanet(1.8, '#ffcc00', '#663300', 9, -90, 'earth', false);
-    const p6 = createPlanet(2.2, '#ff3300', '#330000', -9, -120, 'gas', false);
-    const p7 = createPlanet(1.0, '#ffffff', '#9d50bb', 5, -150, 'earth', true);
-    const p8 = createPlanet(2.0, '#ff0066', '#330011', -6, -190, 'gas', true);
-    const p9 = createPlanet(1.4, '#00ffaa', '#002211', 7, -230, 'earth', false);
-    const p10 = createPlanet(2.8, '#ff9900', '#331100', -8, -270, 'gas', true);
-    const p11 = createPlanet(1.6, '#14b8a6', '#002222', 6, -320, 'earth', false);
-    const p12 = createPlanet(3.5, '#ef4444', '#2a0000', -10, -380, 'gas', true);
-    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
+    const p2 = createPlanet(2.5, '#9d50bb', '#3a0a5a', -10, -10, 'gas', true);
+    const p3 = createPlanet(1.5, '#ff00cc', '#440022', 8, -25, 'earth', false);
+    const p4 = createPlanet(3.0, '#00ffff', '#004444', -7, -45, 'gas', true);
+    const p5 = createPlanet(1.8, '#ffcc00', '#663300', 9, -70, 'earth', false);
+    const p6 = createPlanet(2.2, '#ff3300', '#330000', -9, -100, 'gas', false);
+    const p7 = createPlanet(1.0, '#ffffff', '#9d50bb', 5, -130, 'earth', true);
+    const p8 = createPlanet(2.0, '#ff0066', '#330011', -6, -160, 'gas', true);
+    const p9 = createPlanet(1.4, '#00ffaa', '#002211', 7, -195, 'earth', false);
+    const p10 = createPlanet(2.8, '#ff9900', '#331100', -8, -230, 'gas', true);
+    const p11 = createPlanet(1.6, '#14b8a6', '#002222', 6, -270, 'earth', false);
+    const p12 = createPlanet(3.5, '#ef4444', '#2a0000', -10, -315, 'gas', true);
+    const p13 = createPlanet(1.7, '#8b5cf6', '#1a0b2e', 8, -360, 'earth', false);
+    const planets = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13];
 
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
